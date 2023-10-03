@@ -1,3 +1,4 @@
+import UserCard from "../../components/UserCard/UserCard"
 import { userData } from "../../data/userData"
 import './Users.css'
 console.log(userData)
@@ -7,8 +8,10 @@ const Users = () => {
     <>
       <h1>User List</h1>
       <div className="card-container">
-        {/* map the userData to UserCard components here */}
-      </div> 
+        {userData.map(user => 
+        <UserCard key={user.id} user={user} />
+        )}
+      </div>
     </>
   )
 }

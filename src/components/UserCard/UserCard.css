@@ -5,4 +5,43 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.company-catchPhrase {
+  margin-top: 0;
+}
+
+.company-catchPhrase{
+  color: orange;
+}
+
+.personal-info{
+  width: 100%;
+}
+.personal-info p{
+  text-align: left;
+}
+
+.btn, .btn-website, .btn-website button {
+  margin-top: 10px;
+  padding: 5px 20px;
+  border: none;
+  background-color: orange;
+  border-radius: 20px;
+  opacity: 0.6;
+}
+.btn:hover, .btn-website button:hover {
+  opacity: 1;
+}
+
+.btn-website {
+  display: flex;
+  justify-content: center;
+  opacity: 1;
+  background:none;
+}
+.btn-website button {
+  background: rgb(134, 219, 6);
+  opacity: 0.6;
 }
