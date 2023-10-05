@@ -21,15 +21,19 @@ const Pokedex = () => {
   }
 
   const handleIncrease = () => {
-    let newIdx = currIdx + displayCount
-    setCurrIdx(newIdx)
-    setDisplayedPokemon(filterPokemonData(newIdx))
+    if (currIdx < pokeData.length) {
+      let newIdx = currIdx + displayCount
+      setCurrIdx(newIdx)
+      setDisplayedPokemon(filterPokemonData(newIdx))
+    }
   }
 
   const handleDecrease = () => {
-    let newIdx = currIdx - displayCount
-    setCurrIdx(newIdx)
-    setDisplayedPokemon(filterPokemonData(newIdx))
+    if (currIdx > 0) {
+      let newIdx = currIdx - displayCount
+      setCurrIdx(newIdx)
+      setDisplayedPokemon(filterPokemonData(newIdx))
+    }
   }
 
   return (
