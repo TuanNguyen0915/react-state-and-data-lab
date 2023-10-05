@@ -1,10 +1,14 @@
 import './Circles.css'
 
 const Circles = (props) => {
+  function handleOnClick(clickedIdx){
+    props.handleSelection(clickedIdx)
+  }
+
   return (
-    <div className="circles">
+    <div className="circles" >
       {props.selections.map((selection, idx) =>
-        <div 
+        <div onClick={()=>handleOnClick(idx)} className={selection?"selected":""}
           key={idx}
         >
           {idx + 1}
